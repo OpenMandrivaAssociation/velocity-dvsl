@@ -130,7 +130,7 @@ Group:          Development/Java
 
 %package        demo
 Summary:        Examples for %{name}
-Group:          Development/Documentation
+Group:          Development/Java
 Requires:       velocity-dvsl = 0:%{version}-%{release}
 
 %description    demo
