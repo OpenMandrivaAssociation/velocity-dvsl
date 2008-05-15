@@ -82,7 +82,7 @@ BuildRequires:  maven2-plugin-javadoc
 BuildRequires:  maven2-plugin-resources
 BuildRequires:  maven2-plugin-site
 BuildRequires:  maven-surefire-plugin
-BuildRequires:  mojo-maven2-plugin-taglist
+#BuildRequires:  mojo-maven2-plugin-taglist
 BuildRequires:  maven2-default-skin
 %endif
 
@@ -119,12 +119,14 @@ Group:          Development/Java
 %description    javadoc
 %{summary}.
 
+%if 0
 %package        manual
 Summary:        Documents for %{name}
 Group:          Development/Java
 
 %description    manual
 %{summary}.
+%endif
 
 %package        demo
 Summary:        Examples for %{name}
@@ -199,7 +201,7 @@ mvn-jpp \
         -Dmaven2.jpp.mode=true \
         -Dmaven2.jpp.depmap.file=%{SOURCE2} \
         -Dmaven.repo.local=$MAVEN_REPO_LOCAL \
-        install site
+        install javadoc:javadoc
 %else
 
 %ant -Dskip.jar.loading=true \
@@ -237,13 +239,16 @@ cp -pr target/javadoc/* $RPM_BUILD_ROOT%{_javadocdir}/%{name}-%{version}
 %endif
 ln -s %{name}-%{version} $RPM_BUILD_ROOT%{_javadocdir}/%{name} 
 
+
 # manual
 install -dm 755 $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
+%if 0
 %if %{with_maven}
 rm -rf target/site/apidocs
 cp -pr target/site/* $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
 %else
 cp -pr docs/* $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
+%endif
 %endif
 cp LICENSE $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
 
@@ -281,9 +286,11 @@ rm -rf $RPM_BUILD_ROOT
 %doc %{_javadocdir}/%{name}-%{version}
 %doc %{_javadocdir}/%{name}
 
+%if 0
 %files manual
 %defattr(-,root,root,-)
 %doc %{_docdir}/%{name}-%{version}
+%endif
 
 %files demo
 %defattr(-,root,root,-)
