@@ -40,7 +40,7 @@
 
 Name:           velocity-dvsl
 Version:        1.0
-Release:        %mkrel 1.0.1
+Release:        %mkrel 2.0.1
 Epoch:          0
 Summary:        DVSL Declarative Velocity Style Language
 
