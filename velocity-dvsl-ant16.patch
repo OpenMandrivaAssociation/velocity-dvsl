@@ -1,0 +1,27 @@
+--- src/java/org/apache/dvsl/AntLogChute.java.sav	2007-08-26 11:14:16.000000000 +0200
++++ src/java/org/apache/dvsl/AntLogChute.java	2007-08-26 11:15:19.000000000 +0200
+@@ -134,19 +134,19 @@
+         switch ( level )
+         {
+             case LogChute.TRACE_ID:
+-                task.log( LogChute.TRACE_PREFIX + message, throwable, Project.MSG_DEBUG);
++                task.log( LogChute.TRACE_PREFIX + message, Project.MSG_DEBUG);
+                 break;
+             case LogChute.DEBUG_ID:
+-                task.log( LogChute.DEBUG_PREFIX + message, throwable, Project.MSG_DEBUG );
++                task.log( LogChute.DEBUG_PREFIX + message, Project.MSG_DEBUG );
+                 break;
+             case LogChute.INFO_ID:
+-                task.log( LogChute.INFO_PREFIX + message, throwable, Project.MSG_VERBOSE );
++                task.log( LogChute.INFO_PREFIX + message, Project.MSG_VERBOSE );
+                 break;
+             case LogChute.WARN_ID:
+-                task.log( LogChute.WARN_PREFIX + message, throwable, Project.MSG_WARN );
++                task.log( LogChute.WARN_PREFIX + message, Project.MSG_WARN );
+                 break;
+             case LogChute.ERROR_ID:
+-                task.log( LogChute.ERROR_PREFIX + message, throwable, Project.MSG_ERR );
++                task.log( LogChute.ERROR_PREFIX + message, Project.MSG_ERR );
+                 break;
+             default:
+                 task.log( message );

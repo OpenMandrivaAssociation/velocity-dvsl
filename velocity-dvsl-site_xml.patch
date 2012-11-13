@@ -1,0 +1,15 @@
+--- src/site/site.xml.sav	2007-08-27 12:25:49.000000000 +0200
++++ src/site/site.xml	2007-08-27 12:26:14.000000000 +0200
+@@ -41,9 +41,9 @@
+   </poweredBy>
+ 
+   <skin>
+-    <groupId>org.apache.velocity.site</groupId>
+-    <artifactId>velocity-site-skin</artifactId>
+-    <version>1.2.0</version>
++    <groupId>org.apache.maven</groupId>
++    <artifactId>maven-default-skin</artifactId>
++    <version>1.0</version>
+   </skin>
+ 
+   <body>

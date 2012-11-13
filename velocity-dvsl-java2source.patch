@@ -1,0 +1,20 @@
+--- src/java/org/apache/tools/dvsl/DVSL.java.sav	2007-08-26 10:55:25.000000000 +0200
++++ src/java/org/apache/tools/dvsl/DVSL.java	2007-08-26 10:55:55.000000000 +0200
+@@ -22,7 +22,6 @@
+ /**
+  * Use {@link org.apache.dvsl.DVSL}
+  */
+-@Deprecated
+ public class DVSL extends
+     org.apache.dvsl.DVSL
+ {
+--- src/java/org/apache/tools/dvsl/DVSLTask.java.sav	2007-08-26 10:55:39.000000000 +0200
++++ src/java/org/apache/tools/dvsl/DVSLTask.java	2007-08-26 10:56:01.000000000 +0200
+@@ -22,7 +22,6 @@
+ /**
+  * Use {@link org.apache.dvsl.DVSLTask}
+  */
+-@Deprecated
+ public class DVSLTask extends
+     org.apache.dvsl.DVSLTask
+ {
