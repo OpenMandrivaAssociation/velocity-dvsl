@@ -46,7 +46,7 @@ Summary:        DVSL Declarative Velocity Style Language
 
 Group:          Development/Java
 License:        Apache Software License
-URL:            http://velocity.apache.org/dvsl/releases/dvsl-1.0/
+URL:            https://velocity.apache.org/dvsl/releases/dvsl-1.0/
 Source0:        http://www.apache.org/dist/velocity/dvsl/1.0/velocity-dvsl-1.0-src.tar.gz
 Source1:        %{name}-settings.xml
 Source2:        %{name}-jpp-depmap.xml
